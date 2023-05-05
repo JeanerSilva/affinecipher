@@ -81,7 +81,7 @@ func encrypt(text string, key []int) (string, bool) {
 		}
 		return strings.Join(s, ""), true
 	}
-	return "Erro: Chave " + string(a) + " não é coprima do módulo " + string(mod), false
+	return "Erro: Chave " + fmt.Sprint(a) + " não é coprima do módulo " + fmt.Sprint(mod), false
 }
 
 func decrypt(text string, key []int) (string, bool) {
@@ -96,5 +96,5 @@ func decrypt(text string, key []int) (string, bool) {
 		}
 		return strings.Join(s, ""), true
 	}
-	return "Erro: Chave " + string(a) + " não é coprima do módulo " + string(mod), false
+	return "Erro: Chave " + fmt.Sprint(a) + " não é coprima do módulo " + fmt.Sprint(mod), false
 }
